@@ -1,6 +1,9 @@
 package com.programminghub.mypersonalnotebook;
 
+<<<<<<< HEAD
 import android.content.Intent;
+=======
+>>>>>>> 9695cc8263d74d160e755345df6ac718d2ea7b8d
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -56,11 +59,18 @@ public class AddNotesActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if(validate()){
                     Long time=System.currentTimeMillis();
+<<<<<<< HEAD
                     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
                     noteDatabase.newNoteDAO().insertNote(new Note(noteTitle,noteCategory,sdf.format(time),noteStr));
 
                     Intent navigateToMain=new Intent(AddNotesActivity.this,MainActivity.class);
                     startActivity(navigateToMain);
+=======
+                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                    noteDatabase.newChatDAO().insertNote(new Note(noteTitle,noteCategory,sdf.format(time),noteStr));
+
+                    noteAddedSuccesfulOrNot();
+>>>>>>> 9695cc8263d74d160e755345df6ac718d2ea7b8d
                 }
 
             }
@@ -82,7 +92,11 @@ public class AddNotesActivity extends AppCompatActivity {
 
     //to check whether the note is added succesfully or not
     private void noteAddedSuccesfulOrNot(){
+<<<<<<< HEAD
         List<Note> notes=noteDatabase.newNoteDAO().getAllNote();
+=======
+        List<Note> notes=noteDatabase.newChatDAO().getAllNote();
+>>>>>>> 9695cc8263d74d160e755345df6ac718d2ea7b8d
         if(notes.size()>0){
             for (int i=0;i<notes.size();i++){
                 Log.d(TAG,"note you aadded to daatabase is:"+notes.get(i).getNote());

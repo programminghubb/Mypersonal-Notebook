@@ -5,7 +5,10 @@ import android.arch.persistence.room.Delete;
 import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.Query;
 import android.arch.persistence.room.Update;
+<<<<<<< HEAD
 import android.content.Intent;
+=======
+>>>>>>> 9695cc8263d74d160e755345df6ac718d2ea7b8d
 
 import java.util.List;
 
@@ -28,6 +31,7 @@ public interface NoteDao {
     @Query("Select * from note")
     List<Note> getAllNote();
 
+<<<<<<< HEAD
     @Query("SELECT * FROM note WHERE noteCategory LIKE :noteCategory")
     public List<Note> findNoteAsPerCategory(String noteCategory);
 
@@ -35,4 +39,6 @@ public interface NoteDao {
     public Integer getTotalNoteCount();
 
 
+=======
+>>>>>>> 9695cc8263d74d160e755345df6ac718d2ea7b8d
 }
