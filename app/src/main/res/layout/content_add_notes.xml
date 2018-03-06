@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.programminghub.mypersonalnotebook.AddNotesActivity"
+    tools:showIn="@layout/activity_add_notes">
+
+    <EditText
+        android:id="@+id/note_title"
+        android:hint="Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/note"
+        android:hint="Note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Spinner
+        android:id="@+id/note_category"
+        android:entries="@array/note_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/add_note"
+        android:text="Add Note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
