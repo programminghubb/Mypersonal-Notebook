@@ -13,7 +13,15 @@ import android.content.Context;
 public abstract class NoteDatabase extends RoomDatabase {
     private static NoteDatabase INSTANCE;
 
+<<<<<<< HEAD
     public abstract NoteDao newNoteDAO();
+=======
+<<<<<<< HEAD
+    public abstract NoteDao newNoteDAO();
+=======
+    public abstract NoteDao newChatDAO();
+>>>>>>> 9695cc8263d74d160e755345df6ac718d2ea7b8d
+>>>>>>> 95bf8a3ff4b2f8b8082824c1d8a1244e30188f72
 
     public static NoteDatabase getAppDatabase(Context context) {
         if (INSTANCE == null) {

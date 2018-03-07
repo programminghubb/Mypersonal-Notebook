@@ -16,12 +16,19 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.ViewHolder>{
 
     List<Note> noteList;
     OnNoteLongPressedListener onNoteLongPressedListener;
+<<<<<<< HEAD
     onNotePressedListener onNotePressedListener;
 
     public NoteAdapter(List<Note> noteList,OnNoteLongPressedListener onNoteLongPressedListener,onNotePressedListener onNotePressedListener) {
         this.noteList = noteList;
         this.onNoteLongPressedListener=onNoteLongPressedListener;
         this.onNotePressedListener=onNotePressedListener;
+=======
+
+    public NoteAdapter(List<Note> noteList,OnNoteLongPressedListener onNoteLongPressedListener) {
+        this.noteList = noteList;
+        this.onNoteLongPressedListener=onNoteLongPressedListener;
+>>>>>>> 95bf8a3ff4b2f8b8082824c1d8a1244e30188f72
     }
 
     @Override
@@ -59,7 +66,10 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.ViewHolder>{
         }
 
         public void bindView(final Note note){
+<<<<<<< HEAD
             noteTv.setMaxLines(2);
+=======
+>>>>>>> 95bf8a3ff4b2f8b8082824c1d8a1244e30188f72
             noteTv.setText(note.getNote());
             noteTitleTv.setText(note.getNoteTitle());
             noteCategoryTv.setText(note.getNoteCategory());
@@ -72,6 +82,7 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.ViewHolder>{
                 }
             });
 
+<<<<<<< HEAD
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -79,14 +90,19 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.ViewHolder>{
                 }
             });
 
+=======
+>>>>>>> 95bf8a3ff4b2f8b8082824c1d8a1244e30188f72
         }
     }
 
     interface OnNoteLongPressedListener{
         void onNoteLongPressed(Note note);
     }
+<<<<<<< HEAD
 
     interface onNotePressedListener{
         void onNotePressedListener(Note note);
     }
+=======
+>>>>>>> 95bf8a3ff4b2f8b8082824c1d8a1244e30188f72
 }

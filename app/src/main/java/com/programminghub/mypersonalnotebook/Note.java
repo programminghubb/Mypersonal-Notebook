@@ -4,14 +4,21 @@ import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 
+<<<<<<< HEAD
 import java.io.Serializable;
 
+=======
+>>>>>>> 95bf8a3ff4b2f8b8082824c1d8a1244e30188f72
 /**
  * Created by rojin on 3/4/2018.
  */
 
 @Entity
+<<<<<<< HEAD
 public class Note implements Serializable{
+=======
+public class Note {
+>>>>>>> 95bf8a3ff4b2f8b8082824c1d8a1244e30188f72
 
     @PrimaryKey
     private Integer noteId;

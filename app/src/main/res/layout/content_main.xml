@@ -8,9 +8,27 @@
     tools:context="com.programminghub.mypersonalnotebook.MainActivity"
     tools:showIn="@layout/activity_main">
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 95bf8a3ff4b2f8b8082824c1d8a1244e30188f72
   <android.support.v7.widget.RecyclerView
       android:id="@+id/show_notes_list"
 
       android:layout_width="match_parent"
       android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+<<<<<<< HEAD
+=======
+=======
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+>>>>>>> 9695cc8263d74d160e755345df6ac718d2ea7b8d
+>>>>>>> 95bf8a3ff4b2f8b8082824c1d8a1244e30188f72
 </android.support.constraint.ConstraintLayout>

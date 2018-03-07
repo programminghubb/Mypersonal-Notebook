@@ -1,6 +1,13 @@
 package com.programminghub.mypersonalnotebook;
 
+<<<<<<< HEAD
 import android.content.Intent;
+=======
+<<<<<<< HEAD
+import android.content.Intent;
+=======
+>>>>>>> 9695cc8263d74d160e755345df6ac718d2ea7b8d
+>>>>>>> 95bf8a3ff4b2f8b8082824c1d8a1244e30188f72
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -16,8 +23,11 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
+<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.Arrays;
+=======
+>>>>>>> 95bf8a3ff4b2f8b8082824c1d8a1244e30188f72
 import java.util.Date;
 import java.util.List;
 
@@ -27,6 +37,7 @@ public class AddNotesActivity extends AppCompatActivity {
     Spinner noteCategorySpnr;
     Button addNote;
     NoteDatabase noteDatabase;
+<<<<<<< HEAD
     Toolbar toolbar;
     private final String TAG=AddNotesActivity.class.getSimpleName();
 
@@ -35,10 +46,14 @@ public class AddNotesActivity extends AppCompatActivity {
     Integer noteId;
     public static final String KEY_NOTE_ID="noteId";
 
+=======
+    private final String TAG=AddNotesActivity.class.getSimpleName();
+>>>>>>> 95bf8a3ff4b2f8b8082824c1d8a1244e30188f72
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_notes);
+<<<<<<< HEAD
 
 
         if(getIntent().hasExtra(KEY_IS_UPDATE)){
@@ -50,6 +65,12 @@ public class AddNotesActivity extends AppCompatActivity {
         initView();
         defineView();
         bindView();
+=======
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        initView();
+        defineView();
+>>>>>>> 95bf8a3ff4b2f8b8082824c1d8a1244e30188f72
         addClickListener();
 
     }
@@ -60,11 +81,15 @@ public class AddNotesActivity extends AppCompatActivity {
 
     //definig views
     private void defineView(){
+<<<<<<< HEAD
         toolbar = (Toolbar) findViewById(R.id.toolbar);
+=======
+>>>>>>> 95bf8a3ff4b2f8b8082824c1d8a1244e30188f72
         noteTitleEt=findViewById(R.id.note_title);
         noteEt=findViewById(R.id.note);
         noteCategorySpnr=findViewById(R.id.note_category);
         addNote=findViewById(R.id.add_note);
+<<<<<<< HEAD
 
 
     }
@@ -89,6 +114,8 @@ public class AddNotesActivity extends AppCompatActivity {
             List list = Arrays.asList(categoryList);
             noteCategorySpnr.setSelection(list.indexOf(note.getNoteCategory()));
         }
+=======
+>>>>>>> 95bf8a3ff4b2f8b8082824c1d8a1244e30188f72
     }
     //handling all the click function in a single funcition
     private void addClickListener(){
@@ -97,6 +124,7 @@ public class AddNotesActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if(validate()){
                     Long time=System.currentTimeMillis();
+<<<<<<< HEAD
                     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
                     Note note=new Note(noteTitle, noteCategory, sdf.format(time), noteStr);
                     if(isUpdate){
@@ -115,6 +143,20 @@ public class AddNotesActivity extends AppCompatActivity {
                     }
                     Intent navigateToMain=new Intent(AddNotesActivity.this,MainActivity.class);
                     startActivity(navigateToMain);
+=======
+<<<<<<< HEAD
+                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+                    noteDatabase.newNoteDAO().insertNote(new Note(noteTitle,noteCategory,sdf.format(time),noteStr));
+
+                    Intent navigateToMain=new Intent(AddNotesActivity.this,MainActivity.class);
+                    startActivity(navigateToMain);
+=======
+                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                    noteDatabase.newChatDAO().insertNote(new Note(noteTitle,noteCategory,sdf.format(time),noteStr));
+
+                    noteAddedSuccesfulOrNot();
+>>>>>>> 9695cc8263d74d160e755345df6ac718d2ea7b8d
+>>>>>>> 95bf8a3ff4b2f8b8082824c1d8a1244e30188f72
                 }
 
             }
@@ -136,7 +178,15 @@ public class AddNotesActivity extends AppCompatActivity {
 
     //to check whether the note is added succesfully or not
     private void noteAddedSuccesfulOrNot(){
+<<<<<<< HEAD
         List<Note> notes=noteDatabase.newNoteDAO().getAllNote();
+=======
+<<<<<<< HEAD
+        List<Note> notes=noteDatabase.newNoteDAO().getAllNote();
+=======
+        List<Note> notes=noteDatabase.newChatDAO().getAllNote();
+>>>>>>> 9695cc8263d74d160e755345df6ac718d2ea7b8d
+>>>>>>> 95bf8a3ff4b2f8b8082824c1d8a1244e30188f72
         if(notes.size()>0){
             for (int i=0;i<notes.size();i++){
                 Log.d(TAG,"note you aadded to daatabase is:"+notes.get(i).getNote());

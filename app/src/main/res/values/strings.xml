@@ -10,5 +10,8 @@
         <item>Study</item>
         <item>Other</item>
     </string-array>
+<<<<<<< HEAD
     <string name="title_activity_note_detail">NoteDetailActivity</string>
+=======
+>>>>>>> 95bf8a3ff4b2f8b8082824c1d8a1244e30188f72
 </resources>
